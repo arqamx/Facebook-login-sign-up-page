@@ -1,13 +1,18 @@
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Stack from 'react-bootstrap/Stack';
-import Image from 'react-bootstrap/Image';
-import Card from 'react-bootstrap/Card';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import { Container, Row, Col, Stack, Image, Card, Form, Button } from 'react-bootstrap';
+import { useState } from 'react';
 
 function SignIn() {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        // Handle form submission logic here
+        console.log('Email:', email);
+        console.log('Password:', password);
+    };
+
     return (
         <Container>
             <Row className="justify-content-md-center">
@@ -20,9 +25,9 @@ function SignIn() {
                             <Card >
                                 <Card.Body>
                                     <Card.Title className='d-flex justify-content-center align-items-center mt-2 mb-4'>Log in to Facebook</Card.Title>
-                                    <Form>
-                                        <Form.Control size="lg" type="email" placeholder="Enter email" />
-                                        <Form.Control size="lg" type="password" placeholder="Password" className='mt-4 mb-4' />
+                                    <Form onSubmit={handleSubmit}>
+                                        <Form.Control size="lg" type="email" placeholder="Enter email" onChange={(e) => setEmail(e.target.value)} />
+                                        <Form.Control size="lg" type="password" placeholder="Password" className='mt-4 mb-4' onChange={(e) => setPassword(e.target.value)} />
                                         <Button size="lg" className="w-100 mb-3" variant="primary" type="submit" >Log in</Button>
                                     </Form>
                                     <Card.Link href="#" className='d-flex justify-content-center align-items-center text-decoration-none hover:text-decoration-underline'>Sign up for Facebook</Card.Link>
