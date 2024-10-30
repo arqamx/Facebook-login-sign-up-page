@@ -21,17 +21,17 @@ function SignUp() {
                                     <Card.Title className='d-flex justify-content-center align-items-center mt-2 mb-4'>Create a new account</Card.Title>
                                     <Form>
                                         <Row>
-                                            <Col style={{ paddingRight: '5px' }}><Form.Control size="lg" type="text" name='firstName' placeholder="First name" /></Col>
-                                            <Col style={{ paddingLeft: '5px' }}><Form.Control size="lg" type="text" name='surname' placeholder="Surname" /></Col>
+                                            <Col style={{ paddingRight: '5px' }}><Form.Control required size="lg" type="text" name='firstName' placeholder="First name" /></Col>
+                                            <Col style={{ paddingLeft: '5px' }}><Form.Control required size="lg" type="text" name='surname' placeholder="Surname" /></Col>
                                         </Row>
-                                        <Form.Control size="lg" type="date" name="dateOfBirth"  className='mt-4 mb-4'/>
-                                        <Form.Select  size="lg" name="gender">
+                                        <Form.Control required size="lg" type="date" name="dateOfBirth"  className='mt-4 mb-4'/>
+                                        <Form.Select required size="lg" name="gender">
                                             <option>Female</option>
                                             <option>Male</option>
                                             <option>Prefer not to say</option>
                                         </Form.Select>
-                                        <Form.Control size="lg" type="email" placeholder="Email address" className='mt-4 mb-4' />
-                                        <Form.Control size="lg" type="password" placeholder="New Password" className='mt-4 mb-4' />
+                                        <Form.Control required size="lg" type="email" placeholder="Email address" className='mt-4 mb-4' />
+                                        <Form.Control required size="lg" type="password" placeholder="New Password" className='mt-4 mb-4' />
                                         <Button size="lg" className="w-100 mb-3" variant="primary" type="submit" >Sign Up</Button>
                                     </Form>
                                     <Card.Link href="#" className='d-flex justify-content-center align-items-center text-decoration-none hover:text-decoration-underline'>Already have an account?</Card.Link>
