@@ -1,5 +1,6 @@
 import { Container, Row, Col, Stack, Image, Card, Form, Button, Alert } from 'react-bootstrap';
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function SignUp() {
     const [formData, setFormData] = useState({
@@ -86,7 +87,7 @@ function SignUp() {
                                         )}
                                         <Button size="lg" className="w-100 mb-3" variant="primary" type="submit" >Sign Up</Button>
                                     </Form>
-                                    <Card.Link href="#" className='d-flex justify-content-center align-items-center text-decoration-none hover:text-decoration-underline'>Already have an account?</Card.Link>
+                                    <Link to="/" className='d-flex justify-content-center align-items-center text-decoration-none hover:text-decoration-underline'>Already have an account?</Link>
                                 </Card.Body>
                             </Card>
                         </div>

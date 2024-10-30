@@ -1,5 +1,6 @@
 import { Container, Row, Col, Stack, Image, Card, Form, Button } from 'react-bootstrap';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function SignIn() {
     const [email, setEmail] = useState('');
@@ -30,7 +31,7 @@ function SignIn() {
                                         <Form.Control required size="lg" type="password" placeholder="Password" className='mt-4 mb-4' onChange={(e) => setPassword(e.target.value)} />
                                         <Button size="lg" className="w-100 mb-3" variant="primary" type="submit" >Log in</Button>
                                     </Form>
-                                    <Card.Link href="#" className='d-flex justify-content-center align-items-center text-decoration-none hover:text-decoration-underline'>Sign up for Facebook</Card.Link>
+                                    <Link to='/signup'  className='d-flex justify-content-center align-items-center text-decoration-none hover:text-decoration-underline'>Sign up for Facebook</Link>
                                 </Card.Body>
                             </Card>
                         </div>
