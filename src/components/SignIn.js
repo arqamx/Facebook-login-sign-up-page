@@ -26,8 +26,8 @@ function SignIn() {
                                 <Card.Body>
                                     <Card.Title className='d-flex justify-content-center align-items-center mt-2 mb-4'>Log in to Facebook</Card.Title>
                                     <Form onSubmit={handleSubmit}>
-                                        <Form.Control size="lg" type="email" placeholder="Enter email" onChange={(e) => setEmail(e.target.value)} />
-                                        <Form.Control size="lg" type="password" placeholder="Password" className='mt-4 mb-4' onChange={(e) => setPassword(e.target.value)} />
+                                        <Form.Control required size="lg" type="email" placeholder="Enter email" onChange={(e) => setEmail(e.target.value)} />
+                                        <Form.Control required size="lg" type="password" placeholder="Password" className='mt-4 mb-4' onChange={(e) => setPassword(e.target.value)} />
                                         <Button size="lg" className="w-100 mb-3" variant="primary" type="submit" >Log in</Button>
                                     </Form>
                                     <Card.Link href="#" className='d-flex justify-content-center align-items-center text-decoration-none hover:text-decoration-underline'>Sign up for Facebook</Card.Link>
