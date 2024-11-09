@@ -17,7 +17,7 @@ Designed using [React Bootstrap](https://react-bootstrap.netlify.app/) Framework
 
 ## Features
 
--Link the both pages using React Router DOM
--Basic validation (First name and surname must contain only alphabets)
--Validation for the age (Age must be between 9 and 130 years)
--Password (Password must be at least 8 characters long and contain at least one special character)
+- Link the both pages using React Router DOM
+- Basic validation (First name and surname must contain only alphabets)
+- Validation for the age (Age must be between 9 and 130 years)
+- Password (Password must be at least 8 characters long and contain at least one special character)
